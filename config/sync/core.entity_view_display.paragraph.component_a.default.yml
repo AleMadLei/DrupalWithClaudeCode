@@ -3,23 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.component_a.field_display
     - field.field.paragraph.component_a.field_title
     - paragraphs.paragraphs_type.component_a
-  module:
-    - options
 id: paragraph.component_a.default
 targetEntityType: paragraph
 bundle: component_a
 mode: default
 content:
-  field_display:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
-    region: content
   field_title:
     type: string
     label: above
