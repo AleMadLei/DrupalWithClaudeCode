@@ -1,0 +1,7 @@
+name: 'Style Options: Custom Display Selector'
+type: module
+description: 'Extends Style Options with a custom display selector plugin that reads options from YML configuration.'
+package: Custom
+core_version_requirement: ^10.5 || ^11.2
+dependencies:
+  - style_options:style_options

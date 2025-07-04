@@ -1,0 +1,140 @@
+# Configuration file for Style Options: Custom Display Selector
+# This file demonstrates how to configure the display_selector plugin
+# for different components and contexts.
+
+# The "options" section defines all available display selector options.
+options:
+  # Example display selector configuration
+  component_display_style:
+    # Use our new display_selector plugin
+    plugin: display_selector
+    label: 'Component Display Style'
+    description: 'Choose how this component should be displayed'
+    # Support multiple selections
+    multiple: false
+    # Define the available options
+    options:
+      default:
+        label: 'Default Display'
+        class: 'component-default'
+        attributes:
+          'data-display': 'default'
+      card:
+        label: 'Card Display'
+        class: 'component-card'
+        attributes:
+          'data-display': 'card'
+      featured:
+        label: 'Featured Display'
+        class: 'component-featured highlight'
+        attributes:
+          'data-display': 'featured'
+          'data-priority': 'high'
+      minimal:
+        label: 'Minimal Display'
+        class: 'component-minimal'
+        attributes:
+          'data-display': 'minimal'
+
+  # Another example for layout-specific display options
+  layout_display_mode:
+    plugin: display_selector
+    label: 'Layout Display Mode'
+    description: 'Select the display mode for this layout'
+    multiple: false
+    options:
+      standard:
+        label: 'Standard Layout'
+        class: 'layout-standard'
+      wide:
+        label: 'Wide Layout'
+        class: 'layout-wide container-fluid'
+      boxed:
+        label: 'Boxed Layout'
+        class: 'layout-boxed container'
+        attributes:
+          'data-layout': 'boxed'
+
+  # Example with multiple selection support
+  content_modifiers:
+    plugin: display_selector
+    label: 'Content Modifiers'
+    description: 'Select one or more content modifiers'
+    multiple: true
+    options:
+      shadow:
+        label: 'Drop Shadow'
+        class: 'has-shadow'
+      rounded:
+        label: 'Rounded Corners'
+        class: 'has-rounded-corners'
+      border:
+        label: 'Border'
+        class: 'has-border'
+      animated:
+        label: 'Animated'
+        class: 'has-animation'
+        attributes:
+          'data-animation': 'fade-in'
+
+# The "contexts" section defines which options should be available
+# for specific contexts (layouts, paragraphs, etc.)
+contexts:
+  # Configure options for layout plugins
+  layout:
+    # Default options for all layouts
+    _defaults:
+      options:
+        component_display_style:
+          layout: true
+          regions: true
+        layout_display_mode:
+          layout: true
+          regions: false
+    
+    # Specific configuration for one-column layout
+    layout_onecolumn:
+      options:
+        component_display_style:
+          layout: true
+          regions: true
+        layout_display_mode:
+          layout: true
+        content_modifiers:
+          layout: true
+          regions: true
+
+    # Specific configuration for two-column layout
+    layout_twocol:
+      options:
+        layout_display_mode:
+          layout: true
+        content_modifiers:
+          layout: true
+          regions: true
+
+  # Configure options for paragraph behaviors
+  paragraphs:
+    # Default options for all paragraph types
+    _defaults:
+      options:
+        component_display_style: true
+        content_modifiers: true
+    
+    # Specific configuration for text paragraphs
+    text_paragraph:
+      options:
+        component_display_style: true
+        content_modifiers: true
+    
+    # Specific configuration for image paragraphs
+    image_paragraph:
+      options:
+        component_display_style: true
+        content_modifiers: true
+    
+    # Specific configuration for call-to-action paragraphs
+    cta_paragraph:
+      options:
+        component_display_style: true
+        content_modifiers: true
