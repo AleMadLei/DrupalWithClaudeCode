@@ -1,0 +1,31 @@
+uuid: 4beb739d-4a7e-4a29-9fcf-b8fd3b4b5cf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.component_a.field_display
+    - field.field.paragraph.component_a.field_title
+    - paragraphs.paragraphs_type.component_a
+  module:
+    - options
+id: paragraph.component_a.default
+targetEntityType: paragraph
+bundle: component_a
+mode: default
+content:
+  field_display:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: c0c9c83d-ec5e-43a9-8b01-178a2c4d12f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_2
+    - paragraphs.paragraphs_type.component_b
+  module:
+    - options
+id: paragraph.component_b.field_display_2
+field_name: field_display_2
+entity_type: paragraph
+bundle: component_b
+label: Display
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,31 @@
+uuid: 56e9bb9d-70c5-4fca-8c2a-fdee66c0e3ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.component_b.field_display_2
+    - field.field.paragraph.component_b.field_title
+    - paragraphs.paragraphs_type.component_b
+  module:
+    - options
+id: paragraph.component_b.default
+targetEntityType: paragraph
+bundle: component_b
+mode: default
+content:
+  field_display_2:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,26 @@
+uuid: 48a6c690-6e8a-4df2-8955-5f3d358ad442
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.editor_page.field_layout
+    - node.type.editor_page
+  module:
+    - layout_paragraphs
+    - user
+id: node.editor_page.default
+targetEntityType: node
+bundle: editor_page
+mode: default
+content:
+  field_layout:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  links: true

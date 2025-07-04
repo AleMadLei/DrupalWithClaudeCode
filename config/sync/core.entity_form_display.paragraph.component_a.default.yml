@@ -1,0 +1,30 @@
+uuid: 88e94e72-a1e1-419b-aded-cff8b5673d9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.component_a.field_display
+    - field.field.paragraph.component_a.field_title
+    - paragraphs.paragraphs_type.component_a
+id: paragraph.component_a.default
+targetEntityType: paragraph
+bundle: component_a
+mode: default
+content:
+  field_display:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

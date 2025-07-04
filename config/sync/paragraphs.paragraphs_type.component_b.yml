@@ -1,0 +1,10 @@
+uuid: 4230e654-7486-4415-9127-e70dbdc07e73
+langcode: en
+status: true
+dependencies: {  }
+id: component_b
+label: 'Component B'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

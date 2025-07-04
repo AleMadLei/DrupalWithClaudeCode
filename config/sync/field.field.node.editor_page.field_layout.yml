@@ -1,0 +1,41 @@
+uuid: dfefdeb7-00ae-49a1-a312-47d66a8d335a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_layout
+    - node.type.editor_page
+    - paragraphs.paragraphs_type.component_a
+    - paragraphs.paragraphs_type.component_b
+    - paragraphs.paragraphs_type.section
+  module:
+    - entity_reference_revisions
+id: node.editor_page.field_layout
+field_name: field_layout
+entity_type: node
+bundle: editor_page
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      component_a: component_a
+      component_b: component_b
+      section: section
+    negate: 0
+    target_bundles_drag_drop:
+      component_a:
+        weight: 4
+        enabled: true
+      component_b:
+        weight: 5
+        enabled: true
+      section:
+        weight: 6
+        enabled: true
+field_type: entity_reference_revisions
