@@ -12,6 +12,7 @@
 ddev drush cache:rebuild
 ddev drush en [module_name] -y
 ddev drush pm:uninstall [module_name] -y
+ddev drush config:export
 
 # Testing URL content
 curl -k -s https://drupal-claude-code.ddev.site/new-editor-page | grep -n "pattern"
@@ -19,6 +20,7 @@ curl -k -s https://drupal-claude-code.ddev.site/new-editor-page | grep -n "patte
 # Git workflow
 git add [file]
 git commit -m "message"
+git push
 ```
 
 ## Current Module Status
@@ -46,11 +48,13 @@ git commit -m "message"
 
 ## File Locations
 ```
-/web/
-├── modules/custom/style_options_custom_display_selector/ (preserved)
-├── themes/contrib/drupal_cms_olivero/drupal_cms_olivero.style_options.yml (active)
-├── SUMMARY.md (session documentation)
-└── CLAUDE.md (this file)
+/
+├── CLAUDE.md (this file - moved to root)
+├── SUMMARY.md (session documentation - moved to root)
+├── config/sync/ (exported Drupal configuration)
+└── web/
+    ├── modules/custom/style_options_custom_display_selector/ (committed to repo)
+    └── themes/contrib/drupal_cms_olivero/drupal_cms_olivero.style_options.yml (active)
 ```
 
 ## Best Practices Established
@@ -59,6 +63,8 @@ git commit -m "message"
 3. Use separate option definitions per component (not context overrides)
 4. Follow Drupal coding standards with strict types and docblocks
 5. Use DDEV for all Drush commands
+6. Export configuration with `ddev drush config:export` before commits
+7. Commit configuration and custom modules separately for clarity
 
 ## For Next Session
 - **If needing data attributes**: Re-enable custom module
